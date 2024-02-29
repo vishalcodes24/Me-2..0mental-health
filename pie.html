@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Graph</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Emotional Graph</h1>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const labels = ['Happiness', 'Sadness', 'Anxiety', 'Depression'];
+
+        // Generate random values between 0 and 100 for emotional states
+        const data = labels.map(() => Math.floor(Math.random() * 101));
+
+        const myChart = new Chart(ctx, {
+            type: 'pie', // Change chart type to 'pie'
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Emotions',
+                    data: data,
+                    backgroundColor: ['green', 'blue', 'yellow', 'red']
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Current Emotional State'
+                },
+                legend: {
+                    display: true, // Display the legend for the pie chart
+                    position: 'bottom'
+                }
+            }
+        });
+    </script>
+</body>
+</html>

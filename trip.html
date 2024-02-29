@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            display: flex;
+        }
+
+        .sidebar {
+            flex: 2;
+            padding: 20px;
+            background-color: #f4f4f4;
+            height: 100vh;
+            overflow-y: auto; /* Add scroll bar for long lists */
+        }
+
+        .trip-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .trip-list li {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            animation: fadeInUp 0.5s ease; /* Fade in animation */
+        }
+
+        .trip-list li:hover {
+            background-color: #e0e0e0;
+        }
+
+        .trip-image {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            border-radius: 50%;
+            object-fit: cover; /* Ensure images maintain aspect ratio */
+        }
+
+        .trip-details {
+            flex: 1;
+        }
+
+        .main-section {
+            flex: 5;
+            padding: 20px;
+        }
+
+        .trip-details h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .trip-details p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Keyframe Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Trip Manager</h1>
+    </header>
+    <main class="main-content">
+        <section class="sidebar" id="trip-sidebar">
+            <h2>Upcoming Trips</h2>
+            <ul class="trip-list">
+                <li onclick="showTripDetails('Paris Weekend Getaway', 'March 10-13, 2024', 'Explore the Eiffel Tower, Louvre Museum, and other iconic Parisian sights.')">
+                    <img src="https://via.placeholder.com/60x60/FF5733/FFFFFF?text=Paris" alt="Paris" class="trip-image">
+                    <div class="trip-details">
+                        <h3>Paris Weekend Getaway</h3>
+                        <p>March 10-13, 2024</p>
+                        <p>Explore the Eiffel Tower, Louvre Museum, and other iconic Parisian sights.</p>
+                    </div>
+                </li>
+                <li onclick="showTripDetails('Hiking Adventure in Yosemite', 'May 20-25, 2024', 'Conquer breathtaking trails and enjoy stunning natural landscapes.')">
+                    <img src="https://via.placeholder.com/60x60/33FF57/FFFFFF?text=Yosemite" alt="Yosemite" class="trip-image">
+                    <div class="trip-details">
+                        <h3>Hiking Adventure in Yosemite</h3>
+                        <p>May 20-25, 2024</p>
+                        <p>Conquer breathtaking trails and enjoy stunning natural landscapes.</p>
+                    </div>
+                </li>
+                <li onclick="showTripDetails('Beach Retreat in Bali', 'July 8-15, 2024', 'Relax on beautiful beaches, experience local culture, and enjoy tropical paradise.')">
+                    <img src="https://via.placeholder.com/60x60/5733FF/FFFFFF?text=Bali" alt="Bali" class="trip-image">
+                    <div class="trip-details">
+                        <h3>Beach Retreat in Bali</h3>
+                        <p>July 8-15, 2024</p>
+                        <p>Relax on beautiful beaches, experience local culture, and enjoy tropical paradise.</p>
+                    </div>
+                </li>
+                <li onclick="showTripDetails('Mountain Escapade in the Swiss Alps', 'September 5-10, 2024', 'Savor the breathtaking views and tranquility of the Swiss Alps.')">
+                    <img src="https://via.placeholder.com/60x60/FFD700/FFFFFF?text=Swiss+Alps" alt="Swiss Alps" class="trip-image">
+                    <div class="trip-details">
+                        <h3>Mountain Escapade in the Swiss Alps</h3>
+                        <p>September 5-10, 2024</p>
+                        <p>Savor the breathtaking views and tranquility of the Swiss Alps.</p>
+                    </div>
+                </li>
+                <!-- Add more trips here -->
+            </ul>
+        </section>
+        <section class="main-section" id="trip-details-section">
+            <h2>Trip Details</h2>
+            <p id="trip-details">No trip selected yet. Click on a trip from the sidebar to see details.</p>
+        </section>
+    </main>
+
+    <script>
+        function showTripDetails(title, date, description) {
+            document.getElementById('trip-details').innerHTML = `
+                <strong>${title}</strong><br>
+                <em>${date}</em><br>
+                ${description}
+            `;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yes or No Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://images3.alphacoders.com/133/1332803.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .quiz-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 50%; /* Adjust the width as needed */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    form {
+      max-width: 100%;
+    }
+
+    ol {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type=radio] {
+      margin-right: 10px;
+    }
+
+    .submit-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+    
+    #submit:hover{
+     background-color: rgb(21, 255, 0)
+    }
+
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>SELF ASSESMENT</h1>
+    <p>Answer yes or no to the following questions:</p>
+
+    <form action="/results.php" method="post">
+      <ol id="quiz">
+        <!-- Questions and radio buttons here (first 5 questions) -->
+      </ol>
+
+      <div class="submit-button">
+        <button type="button" id="prevButton" onclick="prevQuestions()">Previous</button>
+        <button type="button" id="nextButton" onclick="nextQuestions()">Next</button>
+      </div>
+
+     <div>
+        <button><a href="sub.html">submit</a></button>
+     </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+        const quiz = document.getElementById('quiz');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    const questions = [
+      "Have you experienced any intrusive thoughts or worries?",
+      "How have these experiences affected you emotionally?",
+      "Have you lost interest or pleasure in activities that you used to enjoy?",
+      "Have you been feeling more irritable or restless than usual?",
+      " Have you had thoughts of self-harm or suicide?",
+      
+   
+      // Add more questions here
+    ];
+    let currentQuestionIndex = 0;
+
+    function loadQuestions(startIndex) {
+      quiz.innerHTML = '';
+      for (let i = startIndex; i < startIndex + 5; i++) {
+        if (i >= questions.length) {
+          break;
+        }
+        const question = questions[i];
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <label>${question}</label>
+          <input type="radio" name="questions[${i}]" value="yes"> Yes
+          <input type="radio" name="questions[${i}]" value="no"> No
+        `;
+        quiz.appendChild(li);
+      }
+
+      // Show or hide the "Previous" button based on the current page
+      if (startIndex === 0) {
+        prevButton.style.display = 'none';
+      } else {
+        prevButton.style.display = 'inline-block';
+      }
+
+      // Show or hide the "Submit" button on the last page
+      if (startIndex >= questions.length - 5) {
+        nextButton.style.display = 'none';
+        finalSubmit.style.display = 'inline-block';
+      } else {
+        nextButton.style.display = 'inline-block';
+        finalSubmit.style.display = 'none';
+      }
+    }
+
+    function prevQuestions() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex -= 5;
+        loadQuestions(currentQuestionIndex);
+      }
+    }
+
+    function nextQuestions() {
+      if (currentQuestionIndex < questions.length - 5) {
+        currentQuestionIndex += 5;
+        loadQuestions(currentQuestionIndex);
+      }
+    }
+
+    loadQuestions(currentQuestionIndex);
+  </script>
+</body>
+</html>

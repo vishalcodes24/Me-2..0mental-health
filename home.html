@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="home.css"
+    <title></title>
+</head>
+<style>
+    body{
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/544/104/2/flowers-flower-artistic-blue-wallpaper-preview.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+        color: #323232;
+        text-align: center;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(assets/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .collapsible {
+        width: fit-content;
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+    }
+    h1 {
+        font-weight: 700;
+        font-size: 5rem;
+        box-shadow: 0px -1px 12px 5px rgb(0, 140, 255);
+        padding: 1.7rem;
+        border-radius: 1.6rem;
+        cursor: pointer;
+    }
+
+    p {
+        max-width: 600px;
+        line-height: 1.5;
+        padding: 0.8rem;
+        font-size: 18px;
+    }
+
+    .container a {
+        display: inline-block;
+        background-color: #323232;
+        color: #fff;
+        padding: 0.7rem 2rem;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 0.7rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .container a:hover {
+        background-color: #35dc14;
+    }
+
+    .blank,
+    .blank-2 {
+        width: 100%;
+        min-height: 60vh;
+        background-color: #323232;
+    }
+
+    .second {
+        background-image: url(assets/bg-2.jpg);
+        background-attachment: fixed;
+        height: 950px;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 500px;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0.7rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        color: #d000ff;
+    }
+
+    .card .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card .info img {
+        width: 90%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        margin-top: 20px;
+        border-radius: 0.7rem;
+    }
+
+    .card .info h3 {
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .card a {
+        margin-bottom: 1.5rem;
+        width: 70%;
+    }
+
+    .blank-2 {
+        min-height: 30vh;
+    }
+
+    .footer {
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer .column {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+    .footer .column h3 {
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        color: #00eff7;
+    }
+
+    .footer .column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer .column ul li {
+        margin: 20px 0;
+    }
+
+    .footer .column ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .footer .column ul li a:hover {
+        color: #eeff00;
+    }
+
+    .navbar input {
+        border: 2px solid black;
+        border-radius: 14px;
+        padding: 3px 17px;
+        width: 129px;
+
+        overflow: auto;
+        border-radius: 3opx;
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 1200px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
+    .vi{
+        padding: 15px;
+        border: 2px solid black;
+        border-radius: 15PX;
+        box-shadow: 1px 2px 12px 0px white;
+        margin-top: 30px;
+        margin: 10px ;
+    }
+</style>
+
+<body>
+  
+
+    <div class="container">
+
+        <nav class="navbar"><input type="text" name="search" id="search" placeholder="Search"></nav>
+
+        <h1>Welcome to Me2.O</h1>
+        <p>Hey there this is me 2.0 here, We are here to help you  we are with you so be free to share your thought with us and we are here for you
+            LETS MAKE YOUR LIFE BETTER</p>
+        <a href="home2.html">Getting Started</a>
+    </div>
+    
+
+    <div class="blank">
+        <img class="vi" src=" https://media.assettype.com/bloombergquint%2F2023-10%2F3624235c-dbd8-4118-b6fa-faea5256626d%2Ftotal_shape_Ianw4RdVuoo_unsplash.jpg?auto=format%2Ccompress&w=576" alt=" " width="40%" height="300">
+        <img class="vi" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiBi-nhRqLI27StAcazQoYkxxmrkAXu86yJOFRJEhif2h5pwtJsII4F6UUjQslgaivu4Y&usqp=CAU" alt="" width=" 50%" height="300">
+        
+    </div>
+    
+
+    <div class="container second">
+        <div class="card">
+            <div class="info">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.z-p7vLPjwCUuvyR2dKPxIwHaE8&pid=Api&P=0&h=180">
+                <h3>Frontline Workers</h3>
+                <p>These are our frontline works who are always here to help you .</p>
+            </div>
+            <a href="frontline.html">Learn More</a>
+        </div>
+        <div class="card">
+            <div class="info">
+                <img src="team photo.jpeg">
+                <h3>Team</h3>
+                <p>This is our me 2.o team who made this project possible for us.</p>
+            </div>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+            <div class="info">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.PkljLRg0_2HkbsgyXrq1FwHaFC&pid=Api&P=0&h=180">
+                <h3>Contact Us</h3>
+                <p>here are all the details about us so you can gives us your valuable feedback.</p>
+            </div>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+
+    <div class="blank-2">
+        <div class="footer">
+            <div class="column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Email Marketing</a></li>
+                    <li><a href="#">Campaigns</a></li>
+                    <li><a href="#">Branding</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Benifits</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Overview</h3>
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Bloggers</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<style>
+    
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function getBotResponse(input) {
+        //rock paper scissors
+        if (input == "rock") {
+            return "paper";
+        } else if (input == "paper") {
+            return "scissors";
+        } else if (input == "shutup") {
+            return "u shutup";
+        } else if (input == "hello") {
+            return "Hello there!";
+        } else if (input == "goodbye") {
+            return "Talk to you later!";
+        } else if (input == "goodbye") {
+            return "Talk to you later!";
+        } else if (input == "how are you") {
+            return "I'm just a computer program, but I'm doing well! How can I assist you today?";
+        } else if (input == "what is your name") {
+            return "I'm ME-2.0, a virtual assistant designed to help you!";
+        } else if (input == "what is the meaning of life") {
+            return "The meaning of life is a philosophical question with no definitive answer, but many believe it's about finding purpose and happiness.";
+        } else if (input == "tell me a joke") {
+            return "Why don't scientists trust atoms? Because they make up everything!";
+        } else if (input == "thanks" || input == "thank you") {
+            return "You're welcome! If you have any more questions, feel free to ask.";
+        } 
+        else if (input === "How can I lose weight?") {
+            return "To lose weight, you should focus on a balanced diet and regular exercise. Cutting back on calorie intake and increasing physical activity can help. It's important to consult a healthcare professional or a dietitian for personalized advice.";
+        } 
+        else if (input === "I feel stressed. What should I do?") {
+            return "When feeling stressed, it's helpful to practice relaxation techniques like deep breathing, meditation, or yoga. You can also try talking to a friend or a mental health professional for support and guidance.";
+        } 
+        else if (input.includes("lose weight")) {
+            return "To lose weight, you should focus on a balanced diet and regular exercise. Cutting back on calorie intake and increasing physical activity can help. It's important to consult a healthcare professional or a dietitian for personalized advice.";
+        }
+        else if (input.includes("stress")) {
+            return "When feeling stressed, it's helpful to practice relaxation techniques like deep breathing, meditation, or yoga. You can also try talking to a friend or a mental health professional for support and guidance.";
+        } 
+        else if (input.includes("COVID-19")) {
+            return "Common symptoms of COVID-19 include fever, cough, loss of taste or smell, and difficulty breathing. If you experience any of these symptoms, it's important to get tested and follow public health guidelines.";
+        } 
+        else if (input.includes("sleep")) {
+            return "To improve your sleep, establish a regular sleep schedule, create a comfortable sleep environment, and avoid caffeine and electronics before bedtime. If sleep problems persist, consult a healthcare professional.";
+        } 
+        else if (input.includes("diet")) {
+            return "For better health, focus on a balanced diet with plenty of fruits, vegetables, lean proteins, and whole grains. Avoid excessive sugar, salt, and processed foods.";
+        }
+        else if (input.includes("exercise")) {
+            return "Regular exercise is essential for maintaining good health. Aim for at least 150 minutes of moderate-intensity aerobic activity per week.";
+        }
+        else if (input.includes("blood pressure")) {
+            return "To manage your blood pressure, reduce sodium intake, maintain a healthy weight, exercise regularly, and limit alcohol consumption.";
+        }
+        else if (input.includes("diabetes")) {
+            return "If you're concerned about diabetes, focus on a healthy diet, regular exercise, and monitoring your blood sugar levels. Consult a doctor for proper diagnosis and management.";
+        }
+        else if (input.includes("stop smoking")) {
+            return "To quit smoking, seek support from a healthcare professional, use smoking cessation programs or products, and surround yourself with a smoke-free environment.";
+        }
+        else if (input.includes("healthy heart")) {
+            return "To maintain a healthy heart, prioritize a heart-healthy diet, regular exercise, stress management, and avoiding smoking.";
+        }
+        else if (input.includes("vaccination")) {
+            return "Vaccinations are crucial for preventing various diseases. Keep up-to-date with recommended vaccines according to your age and health status.";
+        }
+        else if (input.includes("mental health")) {
+            return "For better mental health, practice self-care, seek support from friends or a mental health professional, and manage stress through relaxation techniques.";
+        }
+        else if (input.includes("allergies")) {
+            return "If you have allergies, identify triggers, avoid allergens, and consider over-the-counter or prescription allergy medications. Consult an allergist for a personalized plan.";
+        }
+        else if (input.includes("skin care")) {
+            return "For healthy skin, cleanse, moisturize, and protect it from the sun. Consult a dermatologist for specific skin conditions.";
+        }
+        else if (input.includes("nutrition")) {
+            return "Good nutrition is essential for overall health. Focus on a diet rich in vitamins, minerals, and balanced macronutrients.";
+        }
+        else if (input.includes("baby care")) {
+            return "For baby care, ensure proper nutrition, hygiene, and regular check-ups. Follow pediatrician's guidance for vaccinations and milestones.";
+        }
+        else if (input.includes("first aid")) {
+            return "In case of minor injuries, apply first aid techniques like cleaning wounds, applying bandages, and elevating injuries. Seek medical help for serious cases.";
+        }
+        else if (input.includes("exercise routine")) {
+            return "To establish an exercise routine, set specific goals, choose activities you enjoy, and make it a regular habit. Start slowly and gradually increase intensity.";
+        }
+        else if (input.includes("nut allergies")) {
+            return "If you have nut allergies, read food labels carefully, inform restaurants about your allergies, and carry an epinephrine auto-injector for emergencies.";
+        }
+        else {
+            return "I'm sorry, I can't provide a specific answer to that. Please consult a healthcare professional for personalized advice.";
+        }
+    }
+        
+    
+</script>
+<script>
+// Collapsible
+var coll = document.getElementsByClassName("collapsible");
+
+for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+
+        var content = this.nextElementSibling;
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+    });
+}
+
+function getTime() {
+    let today = new Date();
+    hours = today.getHours();
+    minutes = today.getMinutes();
+
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    let time = hours + ":" + minutes;
+    return time;
+}
+
+// Gets the first message
+function firstBotMessage() {
+    let firstMessage = "How's it going?"
+    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+
+    let time = getTime();
+
+    $("#chat-timestamp").append(time);
+    document.getElementById("userInput").scrollIntoView(false);
+}
+
+firstBotMessage();
+
+// Retrieves the response
+function getHardResponse(userText) {
+    let botResponse = getBotResponse(userText);
+    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+    $("#chatbox").append(botHtml);
+
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+}
+
+//Gets the text text from the input box and processes it
+function getResponse() {
+    let userText = $("#textInput").val();
+
+    if (userText == "") {
+        userText = "I love Code Palace!";
+    }
+
+    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+    setTimeout(() => {
+        getHardResponse(userText);
+    }, 1000)
+
+}
+
+// Handles sending text via button clicks
+function buttonSendText(sampleText) {
+    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
+
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+    //Uncomment this if you want the bot to respond to this buttonSendText event
+    // setTimeout(() => {
+    //     getHardResponse(sampleText);
+    // }, 1000)
+}
+
+function sendButton() {
+    getResponse();
+}
+
+function heartButton() {
+    buttonSendText("Heart clicked!")
+}
+
+// Press enter to send a message
+$("#textInput").keypress(function (e) {
+    if (e.which == 13) {
+        getResponse();
+    }
+});
+</script>
+
+</html>
+
+</body>
+
+</html>

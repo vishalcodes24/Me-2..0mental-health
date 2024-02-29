@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Graph</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Emotional Graph</h1>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const labels = ['Low', 'Intermediate', 'High'];
+
+        // Generate random values for emotional states within specified ranges
+        const generateRandomScore = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+        const lowRange = 0;
+        const intermediateRange = 50;
+        const highRange = 100;
+
+        // Define colors for each section
+        const lowColors = ['green', 'yellow', 'red'];
+        const highColors = ['green', 'yellow', 'red'];
+
+        const data = [
+            ...labels.map(() => generateRandomScore(lowRange, intermediateRange)), // Low section
+            ...labels.map(() => generateRandomScore(intermediateRange, highRange))    // High section
+        ];
+
+        const backgroundColors = [...lowColors, ...highColors];
+
+        const myChart = new Chart(ctx, {
+            type: 'bar', // Change chart type to 'bar'
+            data: {
+                labels: [...labels, ...labels], // Duplicate labels for low and high sections
+                datasets: [{
+                    label: 'Emotions',
+                    data: data,
+                    backgroundColor: backgroundColors
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Current Emotional State (Low, Intermediate, High)'
+                },
+                legend: {
+                    display: false // Disable legend for simplicity
+                }
+            }
+        });
+    </script>
+</body>
+</html>
